@@ -56,7 +56,7 @@ public class CartPopUp extends CartTest {
 
         double itemPrice = Double.parseDouble(priceValue);
         double itemSubtotalPrice = Double.parseDouble(subtotalValue);
-        double quantity = Double.parseDouble(miniCart.getQuantityField().getText());
+        double quantity = Double.parseDouble(miniCart.getQuantityField().getAttribute("value"));
         assertThat("The subtotal price is incorrect", quantity * itemPrice, is(itemSubtotalPrice));
 
     }

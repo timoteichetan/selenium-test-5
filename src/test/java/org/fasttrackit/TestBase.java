@@ -13,12 +13,7 @@ public class TestBase {
 
     protected WebDriver driver;
 
-    @Before
-    public void setup() {
-        System.setProperty("webdriver.chrome.driver", AppConfig.getChromeDriverPath());
-        driver = new ChromeDriver();
-        driver.get(AppConfig.getSiteUrl());
-    }
+
 
     protected void mouseOverAndClickLast(List<By> locators) {
         Actions actions = new Actions(driver);
